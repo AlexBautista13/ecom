@@ -1,0 +1,5 @@
+.layout {
+    display: grid;
+    grid-template-rows: [header-s] 50px [header-e nav-s] 50px [nav-e content-s] 1fr [content-e];
+    grid-template-columns: [s] 1fr [e];
+}
