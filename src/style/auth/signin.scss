@@ -1,12 +1,13 @@
 .sign-in {
     grid-row: content-s/content-e;
     grid-column: s/e;
-
     &__form {
-
+    
     }
 }
 
 .sign-in-form {
-
+    &__line {
+        border-top: 1px solid #ccc;
+    }
 }

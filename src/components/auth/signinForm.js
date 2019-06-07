@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-
 import { reduxForm, Field } from 'redux-form';
 import { FormInput, FormButton } from '../formFields';
-
 class SignInForm extends Component {
     render() {
         const { className, handleSubmit } = this.props;
@@ -20,6 +18,7 @@ class SignInForm extends Component {
                 placeholder='Password'
                 name='password'
                 component={FormInput}/>
+                <div className='sign-in-form__line'></div>
                 <Field className='sign-in-form__login'
                 onClick={() => console.log('tryna submit')}
                 type='submit'
@@ -33,5 +32,4 @@ class SignInForm extends Component {
 SignInForm = reduxForm({
     form: 'SignInForm'
 })(SignInForm);
-
 export default SignInForm;
