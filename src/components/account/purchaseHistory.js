@@ -10,4 +10,4 @@ class PurchaseHistory extends Component {
     }
 }
 
-export default PurchaseHistory; 
+export default PurchaseHistory;
