@@ -1,13 +1,32 @@
 .sign-in {
     grid-row: content-s/content-e;
     grid-column: s/e;
+
+    &__page-title {
+
+    }
+
     &__form {
-    
+        display: grid;
+        grid-template-rows: [email-s] 64px [email-e password-s] 64px [password-e] minmax(20px, 289px) [line-s] 2px [line-e login-s] 38px [login-e];
     }
 }
 
 .sign-in-form {
-    &__line {
-        border-top: 1px solid #ccc;
+    &__email {
+        grid-row: email-s/email-e;
     }
-}
+    &__password {
+        margin-top: 15px;
+        grid-row: password-s/password-e;
+    }
+    &__line {
+        grid-row: line-s/line-e;
+        border-top: 1px solid #ccc;
+
+    }
+    &__login {
+        margin-top: 39px;
+        grid-row: login-s/login-e;
+    }
+} 
