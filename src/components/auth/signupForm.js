@@ -44,32 +44,26 @@ class SignUpForm extends Component {
                 placeholder='Password'
                 name='password'
                 component={FormInput}/>
-                
                 <Field className='sign-up-form__confirm'
                 type='password'
                 title='Confirm Password'
                 placeholder='Confirm Password'
                 name='confirm'
                 component={FormInput}/>
-
                 <div className='sign-up-form__line'></div>
                 <Field className='sign-up-form__login'
-               
                 onClick={() => history.push('/account')}
                 type='submit'
-              
                 title='Creat Account'
                 name='login'
                 component={FormButton}/>
                 <Field className='sign-up-form__back'
-           
                 onClick={() => history.push('/signin')}
                 type='button'
                 title='Back'
                 name='back'
                 short={true}
                 component={FormButton}/>
-               
                 <Details className='sign-up-form__details' title='Password Requirements' info={info}/>
             </form>
         )
