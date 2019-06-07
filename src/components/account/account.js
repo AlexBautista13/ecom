@@ -4,9 +4,7 @@ import * as actions from '../../actions';
 import AccountInformation from './accountInformation';
 import PurchaseHistory from './purchaseHistory';
 class Account extends Component {
-
     componentDidMount() {
-
         const headerLinks = [
             {
                 _id: 0,
@@ -19,27 +17,23 @@ class Account extends Component {
                 path: '/'
             }
         ]
-
         const navbarLinks = [
             {
                 _id: 0,
                 title: 'Purchase History',
-                active: false,
+                active: true,
                 component: <PurchaseHistory/>
             },
             {
                 _id: 1,
                 title: 'Account Information',
-                active: true,
+                active: false,
                 component: <AccountInformation/>
             }
         ]
-
-    
         this.props.setHeaderLinks(headerLinks);
         this.props.setNavbarLinks(navbarLinks);
     }
-
     renderContent() {
         let jsx;
         if(this.props.navbarLinks) {
@@ -51,9 +45,11 @@ class Account extends Component {
         }
         return jsx;
     }
+
     render() {
         return (
-            <div>
+    
+            <div className='account'>
                 { this.renderContent() }
             </div>
         )
