@@ -31,4 +31,4 @@ function mapStateToProps(state) {
 
 Navbar = connect(mapStateToProps, actions)(Navbar);
 
-export default Navbar;
+export default Navbar; 

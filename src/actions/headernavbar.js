@@ -22,4 +22,4 @@ export function changeNavbarActive(_id) {
         type: CHANGE_NAVBAR_ACTIVE,
         payload: _id
     })
-} 
+}

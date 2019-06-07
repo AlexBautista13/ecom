@@ -30,6 +30,7 @@ class Account extends Component {
     }
 
     renderContent() {
+
         let jsx;
         if(this.props.navbarLinks) {
             this.props.navbarLinks.forEach(link => {
@@ -57,4 +58,4 @@ function mapStateToProps(state) {
 
 Account = connect(mapStateToProps, actions)(Account);
 
-export default Account;
+export default Account; 
