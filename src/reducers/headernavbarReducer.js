@@ -2,9 +2,7 @@ import {
     SET_HEADER_LINKS,
     SET_NAVBAR_LINKS
 } from '../actions/types';
-
 const INITIAL_STATE = {
-  
     headerLinks: [
         {
             title: 'yooo'
@@ -15,14 +13,15 @@ const INITIAL_STATE = {
     ],
     navbarLinks: [
         {
-            title: 'account'
+            title: 'account',
+            active: true
         },
         {
-            title: 'purchases'
+            title: 'purchases',
+            active: false
         }
     ]
 }
-
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case SET_HEADER_LINKS:
