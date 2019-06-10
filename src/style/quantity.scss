@@ -1,0 +1,35 @@
+.quantity {
+    display: grid;
+    grid-template-rows: [s] 21px [m] 21px [e];
+    grid-template-columns: [s] 65px [m] 29px [e];
+
+    &__count,
+    &__plus,
+    &__minus {
+        border: 1px solid #E6E6E6;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 21px;
+        width: 29px;
+        grid-column: m/e;
+    }
+
+    &__count {
+        grid-row: s/e;
+        grid-column: s/m;
+        height: 42px;
+        width: 65px;
+        border-radius: 3px 0 0 3px;
+        font-size: 23px;
+        color: #333;
+    }
+    &__plus {
+        grid-row: s/m;
+        border-radius: 0 3px 0 0;
+    }
+    &__minus {
+        grid-row: m/e;
+        border-radius: 0 0 3px 0;
+    }
+}
