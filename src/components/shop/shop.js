@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import ShopSearchBar from './shopSearchBar';
-
 class Shop extends Component {
-
     componentDidMount() {
         const headerLinks = [
             {
@@ -27,14 +24,12 @@ class Shop extends Component {
     }
 
     onSubmit = (fields) => {
-        console.log(fields);
+        this.props.filterProductsWithQuery(fields)
     }
 
     render() {
-
         return (
             <div className='shop'>
-
                 <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar'/>
                 <div className='shop__products'>
                     {
