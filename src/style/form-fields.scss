@@ -1,9 +1,11 @@
 .form-input {
     display: grid;
     grid-gap: 6.5px;
+
     & > * {
         padding-left: 20px;
     }
+
     &__label {
         font-size: 14px;
     }
@@ -17,18 +19,22 @@
         font-size: 18px;
     }
 }
+
 .form-button {
     &__button {
         height: 38px;
         width: 243px;
         border-radius: 20px;
         background-color: #00CB79;
+
         font-size: 16px;
         color: white;
+
         &:focus {
             outline: none;
         }
     }
+
     &__gray-button {
         background: #999;
         width: 137px;
@@ -39,7 +45,7 @@
 .form-button-long-gray {
     display: grid;
     grid-gap: 6.5px;
-
+    
     &__button {
         height: 38px;
         width: 243px;
@@ -58,4 +64,4 @@
         padding-left: 20px;
         font-size: 14px;
     }
-} 
+}
