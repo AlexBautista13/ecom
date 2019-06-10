@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
-
 class Shop extends Component {
-
     componentDidMount() {
         const headerLinks = [
             {
@@ -14,10 +11,9 @@ class Shop extends Component {
             }
         ]
         this.props.setHeaderLinks(headerLinks);
-        // fetch shop products action creator
-        // fetch navbar links
-            // set navbar links
-            // filter products with links
+        this.props.fetchShopCategories();
+        // filter products with links
+        this.props.fetchShopProducts();
     }
     render() {
         return (
@@ -29,11 +25,8 @@ class Shop extends Component {
         )
     }
 }
-
 function mapStateToProps(state) {
     return { state } 
 }
-
 Shop = connect(mapStateToProps, actions)(Shop);
-
-export default Shop; 
+export default Shop;
