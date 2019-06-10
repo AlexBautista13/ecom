@@ -1,0 +1,42 @@
+.shop-product {
+    height: 314px;
+    width: 240px;
+    background-color: white;
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
+
+    &__title {
+        color: #00CB79;
+        font-family: "Encode Sans Condensed";
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__description {
+        font-size: 13px;
+        color: #333333;
+    }
+
+    &__add-to-cart {
+        height: 40px;
+        width: 97px;
+        border-radius: 20px;
+        color: white;
+        background-color: #00CB79;
+        font-weight: 600;
+        font-size: 12px;
+
+        display: grid;
+        justify-items: center;
+        align-items: center;
+
+        transition: all .3s ease;
+
+        &:hover {
+            transform: scale(0.97);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+} 
