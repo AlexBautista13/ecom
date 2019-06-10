@@ -1,4 +1,49 @@
-.account {
+.account-information {
     grid-row: content-s/content-e;
     grid-column: s/e;
+    // &__page-title {
+    // }
+    &__form {
+        display: grid;
+        grid-template-rows: [name-s street-address-s] 64px [name-e street-address-e email-s city-s] 64px [email-e city-e state-s zipcode-s] 64px [zipcode-e state-e];
+        grid-template-columns: [s] 1fr [m] 1fr [e];
+        grid-row-gap: 15px;
+    }
 }
+.account-information-form {
+    &__name {
+        grid-column: s/m;
+        grid-row: name-s/name-e;
+    }
+    &__email {
+        grid-column: s/m;
+        grid-row: email-s/email-e;
+    }
+    &__street-address {
+        grid-column: m/e;
+        grid-row: street-address-s/street-address-e;
+    }
+    &__city {
+        grid-column: m/e;
+        grid-row: city-s/city-e;
+    }
+    &__state {
+        grid-row: state-s/state-e;
+    }
+    &__zipcode {
+        grid-row: zipcode-s/zipcode-e;
+        transform: translateX(226px);
+    }
+    &__state,
+    &__zipcode {
+        grid-column: m/e;
+        input {
+            width: 200px;
+        }
+    }
+
+    &__change-password {
+        transform: translateY(38px);
+    }
+
+} 
