@@ -13,22 +13,19 @@ body {
     font-family: "Open Sans";
     color: #808080;
 }
-
 @import 'layout';
 @import 'headernavbar';
-
 @import 'page-title';
 @import 'form-fields';
 @import 'details';
-
 // AUTH 
 @import 'auth/signin';
 @import 'auth/signup';
-
 // ACCOUNT
 @import 'account/account';
-@import 'account/purchase-history'; 
+@import 'account/purchase-history';
 @import 'account/account-information';
 
 // SHOP
-@import 'shop/shop'; 
+@import 'shop/shop';
+@import 'shop/shop-search-bar'; 
