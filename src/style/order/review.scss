@@ -1,0 +1,11 @@
+.review {
+    grid-row: content-s/content-e;
+    grid-column: s/e;
+
+    &__form {
+        display: grid;
+        grid-template-rows: [legend-s] 30px [legend-e products-s] 400px [products-e line-s] 26px [line-e buttons-s] 38px [buttons-e];
+        grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e proceed-s] 1fr [proceed-e] 1fr;
+        grid-row-gap: 15px;
+    }
+}

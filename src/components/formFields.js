@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 export class FormInput extends Component {
     render() {
         const { className, title, type, placeholder, input } = this.props;
@@ -10,6 +11,7 @@ export class FormInput extends Component {
         )
     }
 }
+
 export class FormButton extends Component {
     render() {
         const { className, title, type, onClick, input, short } = this.props;
@@ -44,4 +46,4 @@ export class LongGrayButton extends Component {
             </div>
         )
     }
-} 
+}

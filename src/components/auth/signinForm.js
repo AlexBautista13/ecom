@@ -1,71 +1,60 @@
 import React, { Component } from 'react';
+
 import { reduxForm, Field } from 'redux-form';
+
 import { FormInput, FormButton } from '../formFields';
 import Details from '../details';
+
 import history from '../../history';
-class SignUpForm extends Component {
+
+class SignInForm extends Component {
     render() {
         const { className, handleSubmit } = this.props;
-        const info = [
+        const links = [
             {
                 _id: 0,
-                title: 'At least 6 characters'
+                title: 'Not registered? Create account here',
+                onClick: () => history.push('/signup')
             },
             {
                 _id: 1,
-                title: 'At least one number'
+                title: 'Forgot account email?',
+                onClick: () => console.log('forgot email')
             },
             {
                 _id: 2,
-                title: 'At least one symbol'
+                title: 'Forgot password?',
+                onClick: () => console.log('forgot password')
             }
         ]
         return (
-            <form onSubmit={handleSubmit} className={`${className} sign-up-form`}>
-                <Field className='sign-up-form__name'
-                type='name'
-                title='Name'
-                placeholder='Name'
-                name='name'
-                component={FormInput}/>
-                <Field className='sign-up-form__email'
+            <form onSubmit={handleSubmit} className={`${className} sign-in-form`}>
+                <Field className='sign-in-form__email'
                 type='email'
                 title='Email'
                 placeholder='Email'
                 name='email'
                 component={FormInput}/>
-                <Field className='sign-up-form__password'
+                <Field className='sign-in-form__password'
                 type='password'
                 title='Password'
                 placeholder='Password'
                 name='password'
                 component={FormInput}/>
-                <Field className='sign-up-form__confirm'
-                type='password'
-                title='Confirm Password'
-                placeholder='Confirm Password'
-                name='confirm'
-                component={FormInput}/>
-                <div className='sign-up-form__line'></div>
-                <Field className='sign-up-form__login'
-                onClick={() => history.push('/account')}
+                <div className='sign-in-form__line'></div>
+                <Field className='sign-in-form__login'
                 type='submit'
-                title='Create Account'
+                title='Login'
                 name='login'
                 component={FormButton}/>
-                <Field className='sign-up-form__back'
-                onClick={() => history.push('/signin')}
-                type='button'
-                title='Back'
-                name='back'
-                short={true}
-                component={FormButton}/>
-                <Details className='sign-up-form__details' title='Password Requirements' info={info}/>
+                <Details className='sign-in-form__details' title='QuickLinks' links={links}/>
             </form>
         )
     }
 }
-SignUpForm = reduxForm({
-    form: 'SignUpForm'
-})(SignUpForm);
-export default SignUpForm;
+
+SignInForm = reduxForm({
+    form: 'SignInForm'
+})(SignInForm);
+
+export default SignInForm;

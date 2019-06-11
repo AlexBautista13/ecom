@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 function PurchaseDetailLabel({className, title, value}) {
     return (
         <div className={`${className} purchase-detail-label`}>
@@ -8,13 +9,16 @@ function PurchaseDetailLabel({className, title, value}) {
         </div>
     )
 }
+
+
 // total: 19.40,
 // creditCard: '-0000',
+
+
 class PurchaseDetail extends Component {
     render() {
         const { className, orderNumber, orderDate, user, total, creditCard } = this.props;
         const { name, shippingAddress } = user;
-
         const nameAddress = `${name}       ${shippingAddress}`
         return (
             <div className={`${className} purchase-detail`}>
@@ -44,11 +48,14 @@ class PurchaseDetail extends Component {
         )
     }
 }
+
 function mapStateToProps(state) {
     const { purchaseDetail } = state.user;
     return {
         ...purchaseDetail
     }
 }
+
 PurchaseDetail = connect(mapStateToProps)(PurchaseDetail);
+
 export default PurchaseDetail;

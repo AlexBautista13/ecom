@@ -1,0 +1,83 @@
+.payment {
+    grid-row: content-s/content-;
+    grid-column: s/e;
+
+    &__form {
+        display: grid;
+        grid-template-rows: [name-s] 64px [name-e card-s] 64px [card-e expiration-ccv-s] 64px [expiration-ccv-e] minmax(20px, 81px) [line-s] 26px [line-e buttons-s] 38px [buttons-e];
+        grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e pay-complete-s] 1fr [pay-complete-e] 1fr;
+        grid-row-gap: 15px;
+    }
+}
+
+.payment-form {
+    &__name {
+        grid-row: name-s/name-e;
+    }
+    &__card {
+        grid-row: card-s/card-e;
+    }
+    &__expiration,
+    &__ccv {
+        grid-row: expiration-ccv-s/expiration-ccv-e;
+        grid-column: back-s;
+        input {
+            width: 200px;
+        }
+    }
+    &__ccv {
+        transform: translateX(226px);
+    }
+
+    &__line {
+        grid-row: line-s/line-e;
+        grid-column: 1/-1;
+        border-top: 1px solid #ccc;
+        margin-bottom: 24px;
+    }
+    &__back {
+        grid-row: buttons-s/buttons-e;
+        grid-column: back-s/back-e;
+    }
+    &__pay-complete {
+        grid-row: buttons-s/buttons-e;
+        grid-column: pay-complete-s/pay-complete-e;
+    }
+    &__order-summary {
+        grid-row: name-s;
+        grid-column: pay-complete-s/-1;
+        justify-self: end;
+    }
+    &__shipping-info {
+        grid-row: name-s;
+        grid-column: pay-complete-s/-1;
+        justify-self: end;
+        transform: translateY(150px);
+    }
+}
+
+
+.small-text { font-size: 14px; }
+
+.shipping-info {
+    width: 240px;
+    height: 150px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 24px 24px;
+    grid-row-gap: 5px;
+
+    & > * {
+        grid-column: 1/-1;
+    }
+    &__title {
+
+    }
+    &__name {
+
+    }
+    &__address {
+
+    }
+}

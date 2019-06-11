@@ -1,7 +1,9 @@
 .sign-up {
     grid-row: content-s/content-e;
     grid-column: s/e;
+
     &__page-title {
+
     }
 
     &__form {
@@ -23,7 +25,6 @@
         grid-row: email-s/email-e;
     }
     &__password {
-     
         grid-row: password-s/password-e;
     }
     &__confirm {
@@ -36,7 +37,6 @@
         margin-bottom: 24px;
     }
     &__login {
-       
         grid-row: buttons-s/buttons-e;
         grid-column: create-s/create-e;
     }

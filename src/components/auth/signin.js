@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import SignInForm from './signinForm';
 import PageTitle from '../pageTitle';
 
@@ -13,8 +14,10 @@ class SignIn extends Component {
     }
 
     onSubmit = (fields) => {
-        console.log(fields);
+        this.props.signIn(fields);
+        this.props.history.push('/account');
     }
+
     render() {
         return (
             <div className='sign-in'>

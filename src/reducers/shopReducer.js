@@ -10,6 +10,7 @@ const INITIAL_STATE = {
     products: [],
     filteredProducts: []
 }
+
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case SET_SHOP_CATEGORIES:

@@ -19,4 +19,4 @@ class Quantity extends Component {
     }
 }
 
-export default Quantity; 
+export default Quantity;

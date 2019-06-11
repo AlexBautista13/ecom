@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+
 import { reduxForm, Field } from 'redux-form';
+
 import { FormInput, FormButton, LongGrayButton } from '../formFields';
+
 import history from '../../history';
+
 class AccountInformationForm extends Component {
+
     constructor() {
         super()
         
@@ -10,6 +15,7 @@ class AccountInformationForm extends Component {
             showPasswords: false
         }
     }
+
     render() {
         const { className, handleSubmit } = this.props;
     
@@ -27,6 +33,7 @@ class AccountInformationForm extends Component {
                 placeholder='Email'
                 name='email'
                 component={FormInput}/>
+
                 <Field className='account-information-form__street-address'
                 type='address'
                 title='Street Address'
@@ -39,6 +46,8 @@ class AccountInformationForm extends Component {
                 placeholder='City'
                 name='city'
                 component={FormInput}/>
+
+
                 <Field className='account-information-form__state'
                 type='state'
                 title='State'
@@ -87,7 +96,7 @@ class AccountInformationForm extends Component {
                             short={true}
                             component={FormButton}/>
                         ]
-
+          
                     :
                         <Field className='account-information-form__change-password'
                         onClick={() => this.setState({ showPasswords: true })}
@@ -101,7 +110,9 @@ class AccountInformationForm extends Component {
         )
     }
 }
+
 AccountInformationForm = reduxForm({
     form: 'AccountInformationForm'
 })(AccountInformationForm);
+
 export default AccountInformationForm;

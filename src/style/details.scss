@@ -1,12 +1,15 @@
+
 .details {
     display: grid;
     grid-row-gap: 13px;
+
     &__title {
         padding-bottom: 7px;
         border-bottom: 1px solid #CCC;
         font-size: 14px;
         font-weight: 600;
     }
+
     &__links {
         font-size: 14px;
         display: grid;
@@ -18,4 +21,4 @@
             text-decoration-line: none;
         }
     }
-} 
+}
